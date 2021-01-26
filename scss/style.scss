@@ -3,7 +3,7 @@
     // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
     font-family: "Maler"; 
     // адрес шрифта и тип 
-    src: url("/assets/fonts/Maler.ttf") format("truetype"); 
+    src: url("../assets/fonts/Maler.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
@@ -12,7 +12,7 @@ $color2: #de3a3a;
 
 //index styles
 .indexBackground {
-    background-image: url(/assets/img/indexBackGround.jpg);
+    background-image: url(../assets/img/indexBackGround.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100vw;

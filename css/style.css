@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Maler";
-  src: url("/assets/fonts/Maler.ttf") format("truetype");
+  src: url("../assets/fonts/Maler.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 .indexBackground {
-  background-image: url(/assets/img/indexBackGround.jpg);
+  background-image: url(../assets/img/indexBackGround.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100vw;
