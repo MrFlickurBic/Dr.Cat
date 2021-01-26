@@ -1,0 +1,567 @@
+%screenAnim {
+    transition-property: visibility, opacity;
+    transition-duration: 0.4s;
+}
+
+$shadow: rgba(0, 0, 0, 0.16); //все тени
+$blue: #004dc1;
+$background-div: #ffffff;
+$grey: #aaaaaa;
+
+$sizefactor: 1 / 1920 * 1920vw / 1vw;
+
+h2,
+h3,
+label {
+    font-family: "Montserrat";
+}
+
+.container-custom {
+    padding-left: calc(150px * #{$sizefactor});
+    padding-right: calc(150px * #{$sizefactor});
+    background-color: #fafafa;
+}
+
+.progress {
+    margin-top: calc(25px * #{$sizefactor});
+    margin-left: 0;
+    width: 100%;
+    height: calc(85px * #{$sizefactor});
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+
+    h2 {
+        margin-bottom: calc(15px * #{$sizefactor});
+        font-weight: 600;
+    }
+
+    .progress-bc {
+        background-color: #dbdbdb;
+        border-radius: calc(10px * #{$sizefactor});
+        .progress-bar {
+            width: 0;
+            height: calc(12px * #{$sizefactor});
+            border-top-left-radius: calc(10px * #{$sizefactor});
+            border-bottom-left-radius: calc(10px * #{$sizefactor});
+            background-color: #0076ff;
+            transition-property: width;
+            transition-duration: 1.15s;
+        }
+    }
+}
+
+//основная часть
+
+#screen1 {
+    @extend %screenAnim;
+
+    .col-one {
+        font-weight: 500;
+
+        h2 {
+            color: #949494;
+            font-size: calc(16px * #{$sizefactor});
+        }
+
+        input[type="text"] {
+            margin-top: calc(9px * #{$sizefactor});
+            outline: none;
+            width: calc(335px * #{$sizefactor});
+            height: calc(60px * #{$sizefactor});
+            border: none;
+            box-shadow: 0 calc(6px * #{$sizefactor}) calc(18px * #{$sizefactor}) $shadow;
+            border-radius: calc(10px * #{$sizefactor});
+            background-color: white;
+            padding-left: calc(20px * #{$sizefactor});
+            font-weight: 500;
+            color: #2e2e2e;
+
+            &.num {
+                width: calc(135px * #{$sizefactor});
+            }
+
+            &.num-2 {
+                width: calc(235px * #{$sizefactor});
+            }
+        }
+    }
+
+    .next-1 {
+        margin-top: calc(36px * #{$sizefactor});
+        h2 {
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: calc(16px * #{$sizefactor});
+
+            span {
+                color: #ff2828;
+            }
+        }
+
+        .row {
+            margin-top: calc(20px * #{$sizefactor});
+            input[type="radio"] {
+                background-color: black;
+                width: calc(18px * #{$sizefactor});
+                height: calc(18px * #{$sizefactor});
+            }
+
+            label {
+                font-weight: 500;
+                margin-left: calc(5px * #{$sizefactor});
+            }
+        }
+    }
+
+    .next-2 {
+        margin-left: calc(46px * #{$sizefactor});
+    }
+
+    .condition {
+        margin-top: calc(25px * #{$sizefactor});
+
+        h2 {
+            font-weight: 700;
+            font-size: calc(24px * #{$sizefactor});
+        }
+        h3 {
+            margin-top: calc(20px * #{$sizefactor});
+            font-weight: 500;
+            font-size: calc(16px * #{$sizefactor});
+            color: $grey;
+
+            span {
+                color: #ff2828;
+            }
+        }
+
+        .radio {
+            width: calc(1198px * #{$sizefactor});
+            height: calc(80px * #{$sizefactor});
+            box-shadow: 0 calc(6px * #{$sizefactor}) calc(18px * #{$sizefactor}) $shadow;
+            border-radius: calc(20px * #{$sizefactor});
+            background-color: $background-div;
+            position: relative;
+            margin-top: calc(12px * #{$sizefactor});
+
+            #frame {
+                position: absolute;
+                max-width: calc(293px * #{$sizefactor});
+                height: calc(80px * #{$sizefactor});
+                border: calc(4px * #{$sizefactor}) solid $blue;
+                border-top-left-radius: calc(20px * #{$sizefactor});
+                border-bottom-left-radius: calc(20px * #{$sizefactor});
+                z-index: 2;
+                transition: border;
+
+                left: 0;
+                transition-duration: 0.5s;
+                transition-property: border-top-left-radius, border-bottom-left-radius, border-top-right-radius,
+                    border-top-left-radius, left;
+            }
+
+            .col-main {
+                max-width: calc(293px * #{$sizefactor});
+                border-right: calc(2px * #{$sizefactor}) solid rgba(170, 170, 170, 0.5);
+                padding: 0;
+                margin: 0;
+                cursor: pointer;
+
+                &.col-last {
+                    max-width: 100%;
+                    border-right: none;
+                }
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            h2 {
+                margin-top: calc(14px * #{$sizefactor});
+                margin-bottom: 0;
+                font-weight: 700;
+                font-size: calc(16px * #{$sizefactor});
+                text-align: center;
+            }
+            h3 {
+                font-weight: 500;
+                font-size: calc(16px * #{$sizefactor});
+                margin-top: calc(10px * #{$sizefactor});
+                color: $grey;
+                text-align: center;
+            }
+        }
+
+        .radio2 {
+            width: calc(1198px * #{$sizefactor});
+            height: calc(90px * #{$sizefactor});
+            box-shadow: 0 calc(6px * #{$sizefactor}) calc(18px * #{$sizefactor}) $shadow;
+            border-radius: calc(20px * #{$sizefactor});
+            background-color: $background-div;
+            position: relative;
+            margin-top: calc(12px * #{$sizefactor});
+
+            #frame2 {
+                position: absolute;
+                width: calc(171px * #{$sizefactor});
+                height: calc(90px * #{$sizefactor});
+                border: calc(4px * #{$sizefactor}) solid $blue;
+                border-top-left-radius: calc(20px * #{$sizefactor});
+                border-bottom-left-radius: calc(20px * #{$sizefactor});
+                z-index: 2;
+                transition: border;
+
+                left: 0;
+                transition-duration: 0.5s;
+                transition-property: border-top-left-radius, border-bottom-left-radius, border-top-right-radius,
+                    border-top-left-radius, left;
+            }
+
+            .col-main {
+                height: calc(90px * #{$sizefactor});
+                border-right: calc(2px * #{$sizefactor}) solid rgba(170, 170, 170, 0.5);
+                padding: 0;
+                margin: 0;
+                cursor: pointer;
+
+                &.col-last {
+                    //max-width: 100%;
+                    border-right: none;
+                }
+
+                &.col-first {
+                }
+            }
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            h2 {
+                margin-top: calc(14px * #{$sizefactor});
+                margin-bottom: 0;
+                font-weight: 700;
+                font-size: calc(16px * #{$sizefactor});
+                text-align: center;
+            }
+            h3 {
+                font-weight: 500;
+                font-size: calc(16px * #{$sizefactor});
+                margin-top: calc(10px * #{$sizefactor});
+                color: $grey;
+                text-align: center;
+            }
+        }
+    }
+
+    .footer1 {
+        width: 78vw;
+        position: fixed;
+        bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        .col-1 {
+            max-width: calc(270px * #{$sizefactor});
+            height: calc(59px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            padding-top: calc(18px * #{$sizefactor});
+            background-color: $background-div;
+
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                text-align: center;
+                p {
+                    font-weight: 700;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: $grey;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .col-2 {
+            width: calc(251px * #{$sizefactor});
+            height: calc(59px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            padding-top: calc(16px * #{$sizefactor});
+            background-color: $blue;
+            div {
+                cursor: pointer;
+                p {
+                    font-weight: 700;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: white;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+#screen2 {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    @extend %screenAnim;
+
+    .col {
+        h2 {
+            font-weight: 700;
+            font-size: calc(22px * #{$sizefactor});
+        }
+        .box {
+            margin-top: calc(15px * #{$sizefactor});
+            width: calc(550px * #{$sizefactor});
+            box-shadow: 0 0 calc(50px * #{$sizefactor}) $shadow;
+            border-radius: calc(30px * #{$sizefactor});
+            background-color: $background-div;
+
+            .hr {
+                width: 100%;
+                height: calc(0.5px * #{$sizefactor});
+                background-color: $grey;
+            }
+
+            .row {
+                padding-top: calc(20px * #{$sizefactor});
+                padding-left: calc(30px * #{$sizefactor});
+
+                input[type="checkbox"] {
+                    width: calc(18px * #{$sizefactor});
+                    height: calc(18px * #{$sizefactor});
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: black;
+                }
+            }
+        }
+
+        .absent {
+            margin-left: calc(15px * #{$sizefactor});
+            margin-top: calc(30px * #{$sizefactor});
+
+            input[type="checkbox"] {
+                width: calc(18px * #{$sizefactor});
+                height: calc(18px * #{$sizefactor});
+            }
+
+            p {
+                font-weight: 700;
+                font-size: calc(16px * #{$sizefactor});
+                color: black;
+            }
+        }
+    }
+
+    .footer {
+        width: 78vw;
+        position: fixed;
+        bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        .col-1 {
+            max-width: calc(270px * #{$sizefactor});
+            height: calc(59px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            padding-top: calc(18px * #{$sizefactor});
+            background-color: $background-div;
+
+            cursor: pointer;
+            div {
+                text-decoration: none;
+                text-align: center;
+                p {
+                    font-weight: 700;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: $grey;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .col-2 {
+            width: calc(251px * #{$sizefactor});
+            height: calc(59px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            padding-top: calc(16px * #{$sizefactor});
+            background-color: $background-div;
+
+            transition-property: background-color;
+            transition-duration: 0.2s;
+            div {
+                background-color: $background-div;
+
+                transition-property: background-color;
+                transition-duration: 0.2s;
+                p {
+                    font-weight: 700;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: $grey;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    transition-property: color;
+                    transition-duration: 0.2s;
+                }
+            }
+        }
+    }
+}
+
+#screen3 {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    @extend %screenAnim;
+
+    .cloud {
+        margin-top: calc(15px * #{$sizefactor});
+        margin-bottom: 0;
+        width: calc(1240px * #{$sizefactor});
+        height: calc(480px * #{$sizefactor});
+        box-shadow: 0 0 calc(50px * #{$sizefactor}) rgba(0, 0, 0, 0.08);
+        border-radius: calc(30px * #{$sizefactor});
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @extend %screenAnim;
+
+        img {
+            width: calc(300px * #{$sizefactor});
+            height: calc(200px * #{$sizefactor});
+        }
+
+        h2 {
+            font-weight: 700;
+            color: $grey;
+            margin-top: calc(13px * #{$sizefactor});
+        }
+
+        .select {
+            width: calc(280px * #{$sizefactor});
+            height: calc(61px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            background-color: #c4c4c4;
+            margin-top: calc(20px * #{$sizefactor});
+            cursor: pointer;
+
+            p {
+                color: white;
+                font-weight: 700;
+                font-size: calc(21px * #{$sizefactor});
+                text-align: center;
+                margin-top: calc(13px * #{$sizefactor});
+            }
+        }
+    }
+
+    #id_snapshot {
+        display: none;
+    }
+
+    #file-list {
+        margin-top: calc(15px * #{$sizefactor});
+        width: calc(1240px * #{$sizefactor});
+        height: calc(480px * #{$sizefactor});
+        box-shadow: 0 0 calc(50px * #{$sizefactor}) rgba(0, 0, 0, 0.08);
+        border-radius: calc(30px * #{$sizefactor});
+        background-color: #ffffff;
+
+        @extend %screenAnim;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+
+        .file {
+            padding-top: calc(35px * #{$sizefactor});
+            margin-left: calc(35px * #{$sizefactor});
+            img {
+                width: calc(56px * #{$sizefactor});
+                height: calc(70px * #{$sizefactor});
+
+                &#trash-btn {
+                    cursor: pointer;
+                }
+            }
+
+            .col-auto {
+                display: flex;
+                align-items: center;
+                p {
+                    font-weight: 700;
+                    font-size: calc(24px * #{$sizefactor});
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 78vw;
+        position: fixed;
+        bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        .col-1 {
+            max-width: calc(270px * #{$sizefactor});
+            height: calc(59px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            padding-top: calc(18px * #{$sizefactor});
+            background-color: $background-div;
+
+            cursor: pointer;
+            div {
+                text-decoration: none;
+                text-align: center;
+                p {
+                    font-weight: 700;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: $grey;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .col-2 {
+            width: calc(251px * #{$sizefactor});
+            height: calc(59px * #{$sizefactor});
+            border-radius: calc(10px * #{$sizefactor});
+            padding-top: calc(16px * #{$sizefactor});
+            background-color: $background-div;
+
+            transition-property: background-color;
+            transition-duration: 0.2s;
+            label {
+                background-color: $background-div;
+
+                transition-property: background-color;
+                transition-duration: 0.2s;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    font-weight: 700;
+                    font-size: calc(16px * #{$sizefactor});
+                    color: $grey;
+                    text-transform: uppercase;
+
+                    transition-property: color;
+                    transition-duration: 0.2s;
+                }
+            }
+            input[type=submit] {
+                display: none;
+            }
+        }
+    }
+}

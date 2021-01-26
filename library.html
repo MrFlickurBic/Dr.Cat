@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/cabinet_generic.css">
+    <title>Library</title>
+</head>
+
+<body>
+    <nav class="navbar justify-content-between">
+        <div>
+          <a class="navbar-brand" href="#">
+            <img src="assets/svg/logo.svg" class="d-inline-block align-top" alt="Logo">
+            Dr.CAT
+          </a>
+          <a href="addNew.html" class="begin d-inline-block">
+            <p>Начать диагностику</p>
+          </a>
+        </div>
+        <nav class="d-flex justify-content-between">
+          <a class="activ" href="profile.html">Личный кабинет</a>
+          <a class="activ" href="users.html">Люди</a>
+          <div class="active">
+            <a class="now" href="#">Библиотека снимков</a>
+          </div>
+          <a class="activ" href="#">Справка</a>
+        </nav>
+      </nav>
+
+    <div class="wrapper">
+        <div id="content">
+            <h1>Библиотека снимков</h1>
+
+            <div class="row search">
+                <div class="col-auto d-flex align-items-center">
+                    <img src="assets/svg/loupe-grey.svg" alt="Loupe icon">
+                </div>
+                <div class="col-auto p-0">
+                    <input id="searchLine" type="text" placeholder="Поиск">
+                </div>
+                <div class="col-auto d-flex align-items-center btn" onclick="openSideBar()">
+                    <img src="assets/svg/filtres.svg" alt="Filtres icon">
+                </div>
+            </div>
+
+            <div class="library">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="results.html">
+                                <img src="assets/img/img-result-test.jpg" alt="File img">
+                                <p>Константинов Иван Егорович - САК</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="d-none" id="sidebar">
+            <div id="data">
+                <div class="row">
+                    <div class="col-auto d-flex align-items-center">
+                        <h1 class="title m-0">Фильтр</h1>
+                    </div>
+                    <div class="col-auto p-0 d-flex align-items-center">
+                        <button id="sidebarCollapse2" onclick="closeSideBar()">
+                            <p>Свернуть</p>
+                        </button>
+                    </div>
+                </div>
+
+                <h2 class="data-title">Тип патологии</h2>
+
+                <div class="data">
+                    <div id="radioType" class="row">
+                        <div class="col-auto">
+                            <input class="d-none" id="type-1" type="checkbox">
+                            <label for="type-1" onclick="$(this).toggleClass('active');">САК</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="type-2" type="checkbox">
+                            <label for="type-2" onclick="$(this).toggleClass('active');">ВМГ</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="type-3" type="checkbox">
+                            <label for="type-3" onclick="$(this).toggleClass('active');">ВЖК</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="type-4" type="checkbox">
+                            <label for="type-4" onclick="$(this).toggleClass('active');">Ишемия</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="type-5" type="checkbox">
+                            <label for="type-5" onclick="$(this).toggleClass('active');">Опухоль</label>
+                        </div>
+                    </div>
+
+                    <h2 class="data-title">Объем гематомы (см³)</h2>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <input type="text" class="input-volume" id="volume-min" placeholder="От">
+                        <p class="text-volume">–</p>
+                        <input type="text" class="input-volume" id="volume-max" placeholder="До">
+                    </div>
+
+                    <h2 class="data-title">Время начала симптоматики (часов назад)</h2>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <input type="text" class="input-volume" id="time-min" placeholder="От">
+                        <p class="text-volume">–</p>
+                        <input type="text" class="input-volume" id="time-max" placeholder="До">
+                    </div>
+
+                    <h2 class="data-title">Травма</h2>
+                    <div id="radioType" class="row">
+                        <div class="col-auto">
+                            <input class="d-none" id="injure-1" type="radio">
+                            <label for="injure-1" onclick="setActive2(this)">Да</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="injure-2" type="radio">
+                            <label for="injure-2" onclick="setActive2(this)">Нет</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="injure-3" type="radio">
+                            <label for="injure-3" onclick="setActive2(this)">Неизвестно</label>
+                        </div>
+                    </div>
+
+                    <h2 class="data-title">Симптомы инсульта</h2>
+                    <div id="radioType" class="row">
+                        <div class="col-auto">
+                            <input class="d-none" id="insult-1" type="radio">
+                            <label for="insult-1" onclick="setActive3(this)">Да</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="d-none" id="insult-2" type="radio">
+                            <label for="insult-2" onclick="setActive3(this)">Нет</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    </div>
+</body>
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<!--JQuery UI, подрубить-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!--Montserrat font-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="js/search.js"></script>
+<script src="js/filtres.js"></script>
+
+</html>

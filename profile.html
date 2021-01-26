@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/cabinet_generic.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <nav class="navbar justify-content-between">
+        <div>
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/svg/logo.svg" class="d-inline-block align-top" alt="Logo">
+            Dr.CAT
+          </a>
+          <a href="addNew.html" class="begin d-inline-block">
+            <p>Начать диагностику</p>
+          </a>
+        </div>
+        <nav class="d-flex justify-content-between">
+          <div class="active">
+            <a class="now" href="#">Личный кабинет</a>
+          </div>
+          <a class="activ" href="users.html">Люди</a>
+          <a class="activ" href="library.html">Библиотека снимков</a>
+          <a class="activ" href="#">Справка</a>
+        </nav>
+      </nav>
+
+    <h1>Личный кабинет</h1>
+    <div class="row">
+        <div class="col-auto">
+            <img src="assets/svg/person-4.svg" alt="Person logo">
+        </div>
+        <div class="col-auto">
+            <div id="info">
+                <h2>Иванов Иван Иванович <button onclick="openEditMenu()"><img src="assets/svg/editar.svg" alt="Edit icon"></button></h2>
+                <p>Невролог</p>
+                <p class="first">Стаж:</p>
+                <p>Квалификация:</p>
+                <p>Место работы:</p>
+                <p>Образование:</p>
+                <p>Контакты:</p>
+            </div>
+            <form id="form" class="d-none" action="#">
+                <h2>ФИО: <input type="text" placeholder="ФИО"> <button onclick="openEditMenu()"><img src="assets/svg/editar.svg" alt="Edit icon"></button></h2>
+                <p>Специальность: <input type="text" placeholder="Специальность"></p>
+                <p class="first">Стаж: <input type="text" placeholder="Стаж"></p>
+                <p>Квалификация: <input type="text" placeholder="Квалификация"></p>
+                <p>Место работы: <input type="text" placeholder="Место работы"></p>
+                <p>Образование: <input type="text" placeholder="Образование"></p>
+                <p>Контакты: <input type="text" placeholder="Контакты"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="row search">
+            <div class="col-auto d-flex align-items-center">
+                <img src="assets/svg/loupe-grey.svg" alt="Loupe icon">
+            </div>
+            <div class="col-auto p-0">
+                <input id="searchLine" type="text" placeholder="Поиск">
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <div class="row">
+                    <div class="col-auto d-flex align-items-center">
+                        <img src="assets/svg/Folder.svg" alt="Folder ico">
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="results.html">Апельсинов Елисей Ярославович. САК</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <div class="col-auto d-flex align-items-center">
+                        <img src="assets/svg/Folder.svg" alt="Folder ico">
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="results.html">Бобова Виктория Максимовна. Опухоль</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <div class="col-auto d-flex align-items-center">
+                        <img src="assets/svg/Folder.svg" alt="Folder ico">
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="results.html">Виноградова Милана Олеговна. Эпидуральная гематома</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <div class="col-auto d-flex align-items-center">
+                        <img src="assets/svg/Folder.svg" alt="Folder ico">
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="results.html">Голубева Галина Григорьевна.</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+<!--Montserrat font-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="js/search.js"></script>
+<script src="js/openEditMenu.js"></script>
+
+</html>

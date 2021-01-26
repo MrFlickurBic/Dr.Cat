@@ -1,0 +1,132 @@
+h1,
+p {
+    font-family: "Montserrat";
+}
+
+$shadow: rgba(0, 0, 0, 0.16); //все тени
+$blue: #004dc1;
+$background-div: #ffffff;
+$black: #2e2e2e;
+$grey: #aaaaaa;
+
+html {
+    overflow: hidden;
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: #c4c4c4;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #c4c4c4; //for FireFox browser
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    color: $black;
+    margin-top: 27px;
+    margin-left: 60px;
+}
+
+.form {
+    width: 1320px;
+    box-shadow: 0 0 50px $shadow;
+    border-radius: 30px;
+    background-color: $background-div;
+    margin-top: 37px;
+    margin-left: 60px;
+    padding-left: 25px;
+
+    form {
+        //scroll
+        width: 98%;
+        padding-left: 15px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 465px;
+
+        .title {
+            padding-top: 24px;
+            font-weight: 700;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .input-title {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 24px;
+
+            span {
+                color: #ff2828;
+            }
+        }
+
+        input {
+            width: 97%;
+            height: 60px;
+            box-shadow: 0 6px 18px $shadow;
+            border-radius: 10px;
+            background-color: $background-div;
+            border: none;
+            outline: none;
+            padding-left: 21px;
+
+            color: $black;
+            font-weight: 500;
+        }
+
+        .row {
+            margin-bottom: 18px;
+
+            img {
+                width: 212px;
+                height: 212px;
+                margin-top: 24px;
+                object-fit: cover;
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+                height: 64px;
+                padding: 0 63px;
+                border-radius: 10px;
+                background-color: #ffffff;
+                font-weight: 500;
+                font-size: 18px;
+                text-align: center;
+                padding-top: 17px;
+                color: $grey;
+                box-shadow: 0 0 50px $shadow;
+            }
+        }
+        input[type="submit"] {
+            width: 251px;
+            height: 59px;
+            border-radius: 10px;
+            background-color: #ffffff;
+
+            color: $grey;
+            font-weight: 700;
+            font-size: 18px;
+
+            position: fixed;
+            bottom: 20px;
+            right: 155px;
+
+            transition: all 0.2s;
+        }
+    }
+}

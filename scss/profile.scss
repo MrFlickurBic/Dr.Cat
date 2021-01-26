@@ -1,0 +1,174 @@
+$shadow: rgba(0, 0, 0, 0.16); //все тени
+$blue: #004dc1;
+$background-div: #ffffff;
+$black: #2e2e2e;
+$grey: #aaaaaa;
+
+h1,
+h2,
+p {
+    font-family: "Montserrat";
+}
+
+html {
+    overflow: hidden;
+
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: #c4c4c4;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #c4c4c4; //for FireFox browser
+}
+
+h1 {
+    font-weight: 700;
+    color: $black;
+    font-size: 36px;
+    margin-top: 27px;
+    margin-left: 60px;
+}
+
+.row {
+    margin-top: 24px;
+    margin-left: 60px;
+    img {
+        width: 242px;
+        height: 242px;
+        border-radius: 120px;
+    }
+
+    h2 {
+        font-weight: 700;
+        color: $black;
+        font-size: 24px;
+    }
+
+    p {
+        margin-top: 15px;
+        font-weight: 700;
+        color: $grey;
+        font-size: 18px;
+        margin-bottom: 0;
+
+        &.first {
+            margin-top: 28px;
+        }
+    }
+}
+
+.history {
+    width: 90%;
+    height: 369px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    background-color: #ffffff;
+    margin-left: 60px;
+    margin-top: 30px;
+    padding-top: 5px;
+
+    .search {
+        width: 600px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: rgba(170, 170, 170, 0.25);
+        margin-left: 45px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        input[type="text"] {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 510px;
+            height: 100%;
+            padding-bottom: 3px;
+            font-weight: 500;
+        }
+    }
+
+    ul {
+        max-height: 190px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-right: 30px;
+        
+        li {
+            margin: 14px 0;
+            list-style-type: none;
+            .row {
+                margin-left: 0;
+                margin-top: 0;
+
+                img {
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 0;
+                }
+
+                a {
+                    margin-top: 2px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $black;
+                    margin: 0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#info {
+    button {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        img {
+            width: 23px;
+            height: 23px;
+            border-radius: 0;
+        }
+    }
+}
+
+#form {
+    p {
+        margin-top: 10px;
+    }
+    button {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        img {
+            width: 23px;
+            height: 23px;
+            border-radius: 0;
+        }
+    }
+}
+
+#form input[type=text] {
+    outline: none;
+    width: 300px;
+    border: none;
+    box-shadow: 0 6px 18px $shadow;
+    border-radius: 10px;
+    background-color: white;
+
+    font-size: 15px;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #2e2e2e;
+}

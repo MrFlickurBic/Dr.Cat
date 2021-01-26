@@ -1,0 +1,103 @@
+h1,
+h2,
+p {
+    font-family: "Montserrat";
+}
+
+$shadow: rgba(0, 0, 0, 0.16); //все тени
+$blue: #004dc1;
+$background-div: #ffffff;
+$black: #2e2e2e;
+$grey: #aaaaaa;
+
+html {
+    overflow: hidden;
+
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: #c4c4c4;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #c4c4c4; //for FireFox browser
+}
+
+h1 {
+    font-weight: 700;
+    color: $black;
+    margin-top: 27px;
+    margin-left: 60px;
+}
+
+.search {
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(170, 170, 170, 0.25);
+    margin-left: 60px;
+    margin-top: 46px;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+    input[type="text"] {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        width: 510px;
+        height: 100%;
+        padding-bottom: 3px;
+        font-weight: 500;
+    }
+}
+
+.users {
+    width: 90%;
+    height: 489px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    background-color: #ffffff;
+    margin-top: 32px;
+    margin-left: 60px;
+    padding-top: 15px;
+
+    ul {
+        max-height: 450px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-right: 30px;
+
+        li {
+            margin: 14px 0;
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                h2 {
+                    margin-top: 15px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $black;
+                }
+                p {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $grey;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,406 @@
+h1 {
+    font-family: "Montserrat";
+}
+
+html {
+    overflow: hidden;
+
+    //scrollbar
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: #c4c4c4;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #c4c4c4; //for FireFox browser
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left: 60px;
+    margin-top: 27px;
+
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    .row {
+        margin-top: 36px;
+
+        .col-left {
+            margin-right: 5px;
+        }
+
+        .col-right {
+            margin-left: 5px;
+
+            .result {
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+                border-radius: 30px;
+                background-color: #ffffff;
+                padding: 10px 15px 15px 10px;
+                margin-top: 15px;
+                margin-right: 40px;
+                height: 360px;
+
+                .text {
+                    margin-top: 20px;
+                    margin-left: 10px;
+
+                    p {
+                        margin-bottom: 5px;
+                        color: #aaa;
+                        font-size: 18px;
+
+                        span {
+                            color: #808080;
+                            font-weight: 700;
+                        }
+
+                        &.big-text {
+                            font-weight: 500;
+                            color: #aaa;
+                            padding-left: 40px;
+                        }
+                    }
+                }
+                .col-text {
+                    padding: 0;
+
+                    p {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .img {
+            position: relative;
+            transition: all 0.3s;
+            &:hover {
+                &:after {
+                    content: "";
+                    cursor: pointer;
+                    display: block;
+                    width: 384px;
+                    height: 433px;
+                    background-image: url(../assets/svg/loupe-plus.svg);
+                    position: absolute;
+                    top: 0;
+                }
+            }
+
+            img {
+                width: 384px;
+                height: 433px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 24px;
+
+            &.diagnosis {
+                margin-bottom: 12px;
+            }
+            &.recommendation {
+                margin-top: 15px;
+            }
+        }
+
+        p {
+            padding-left: 22px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #aaaaaa;
+        }
+
+        .text {
+            margin-left: 40px;
+            margin-right: 25px;
+            margin-top: 8px;
+            max-height: 300px;
+            overflow-y: scroll;
+            p {
+                padding-right: 17px;
+            }
+        }
+    }
+}
+
+//Img full screen
+#imgFullScreen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.555);
+    z-index: 2;
+    padding: 50px;
+    transition: all 0.2s;
+    opacity: 0;
+    display: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+//previousButton
+#previousButton {
+    /* Style for "Background" */
+    width: 183px;
+    height: 59px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+    outline: none;
+    border: none;
+    position: fixed;
+    bottom: 31px;
+    left: 90px;
+
+    p {
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        margin-top: 17px;
+    }
+}
+
+//sidebar button
+#open-buttons {
+    position: fixed;
+    right: 50px;
+    top: 135px;
+
+    #sidebarCollapse {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 24px;
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #aaaaaa;
+        }
+    }
+
+    #simularCollapse {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+}
+
+#sidebarCollapse2 {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 24px;
+    padding-top: 5px;
+    padding-right: 30px;
+    transition: all 0.3s;
+
+    p {
+        font-weight: 500;
+        font-size: 16px;
+        color: #aaaaaa;
+    }
+}
+
+//sidebar
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 480px;
+    max-width: 480px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    transition: all 0.3s;
+    padding-top: 16px;
+    padding-left: 20px;
+
+    #data {
+        .title {
+            font-weight: 700;
+            font-size: 27px;
+        }
+
+        .data-title {
+            font-weight: 700;
+            font-size: 24px;
+            margin-top: 25px;
+        }
+
+        .data {
+            margin-top: 16px;
+            margin-right: 20px;
+            max-height: 520px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            span {
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                background-color: #ffffff;
+
+                font-weight: 500;
+                font-size: 16px;
+                color: #808080;
+                padding: 4px 19px;
+            }
+            
+            .data1 {
+                margin-top: 20px;
+                padding-left: 7px;
+
+                .col-auto {
+                    padding-right: 8px;
+                    padding-left: 8px;
+
+                    p {
+                        font-weight: 700;
+                        font-size: 17px;
+                    }
+
+                    span {
+                        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                        border-radius: 10px;
+                        background-color: #ffffff;
+
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #808080;
+                        padding: 4px 19px;
+                    }
+                }
+            }
+
+            .data-title2 {
+                margin-top: 25px;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            .d-span {
+                margin-left: 2px;
+            }
+
+            .data-title3 {
+                margin-top: 20px;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            .pathologies {
+                margin-top: 30px;
+                font-weight: 700;
+                font-size: 24px;
+                margin-left: 2px;
+            }
+
+            ul {
+                padding-left: 15px;
+
+                li {
+                    margin-top: 11px;
+                    margin-bottom: 11px;
+                    list-style: none;
+                }
+            }
+        }
+    }
+}
+
+#simular {
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    #simularCollapse2 {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 24px;
+        padding-top: 12px;
+        padding-right: 30px;
+        transition: all 0.3s;
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #aaaaaa;
+        }
+    }
+
+    .data {
+        margin-top: 16px;
+        margin-right: 20px;
+        max-height: 550px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .img-min {
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s;
+            &:hover {
+                &:after {
+                    content: '';
+                    cursor: pointer;
+                    display: block;
+                    width: 110px;
+                    height: 130px;
+                    background-image: url(../assets/svg/loupe-plus-min.svg);
+                    position: absolute;
+                    top: 0;
+                }
+            }
+            img {
+                width: 110px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+#sidebar.active {
+    margin-right: -480px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
